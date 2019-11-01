@@ -7,11 +7,11 @@
     <title>Timothy Long</title>
 </head>
 <body>
-<div id="buttons">
+<div id="buttons" class="button">
 
 </div>
 
- <div id="intro">
+ <div id="intro" class="story">
 
  </div>
        
@@ -41,16 +41,17 @@ function makeButton(btnText, choice){
 
     button.addEventListener ("click", function() {
 alert("chose " + choice);
-}
+});
 
-  function showStory(text){
+  function showStory(text)  {
     let storyItem = document.createElement 
     ("p");
 
     storyItem.innerText = text;
 
     storyContainer.appendchild(storyItem);
-
+ 
+}
 }
 
  showStory(story.intro.text)
