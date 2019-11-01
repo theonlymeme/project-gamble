@@ -4,57 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Timothy Long</title>
+    <title>An Interactive Story</title>
 </head>
 <body>
-<div id="buttons" class="button">
+    
+    <div id="intro">
+        <h1>The Gamble</h1>
+            <h2> By: Timothy Long & Anthony Pasadas</h2>
+        <p> seeps through the metal blinds of Samson’s room waking him from his deep slumber. As he starts to crawl out of bed a big yawn throws itself out of Samson’s mouth. After getting out of bed, he goes to the bathroom where he gets undressed, and starts the shower. After showering he gets out with drips of water falling on the floor mat under him. He grabs his towel and moves himself to his room again to get dressed in whatever clothes he could find. He finds an oversized shirt with the words thrasher and a pair of dirty jeans that he wore three days ago from his hamper.<br>
+            Samson’s mother calls for samson to get his breakfast before it gets too cold. Samson opens the door and walks down the narrow hallway of their apartment building to the kitchen. Samson’s mother could be seen cooking some bacon and pancakes with bliss. Samson grabs his 2 pieces of bacon and 2 large pancakes from a plate that was sitting next to his mother. He grabs a paper plate from the pantry and sits down at the table where, already sitting, was a maple syrup bottle and some butter. <br>
+            Once Samson was done he put his worn shoes on and left the house, heading for the coal plant where he worked. There he works non-stop, pushing buttons and moving conveyor belt until the bell rings to tell everyone to leave. After that day of work he only managed to get $100, but that is plenty for him because he has a bigger plan.<br>
+            Samson walks to the richer part of town, and into a little bar where he sees a poker table. The bar is a popular one, so he has to push people out of his way to get to the poker table in the corner of the room. Once Sampson reaches the table he sees a man with a very big and fluffy jacket that is colored red and has a camo design. <br>
+            Samson sits down next to him and tries to shake his hand, but he didn’t even acknowledge Samson. Samson hands in his $100 to the dealer and gets handed five white chips. Everyone has a small smirk to them as they see Samson get handed his chips. Samson knows that everyone has thousands on the table, but that was all the money he had. As the game started Samson has to put in one white chip before the game starts, but gets dealt a great hand and wins quadruple what he had before. <br>
+            But Samson wanted more, so he played more and more until he had most of everyone’s money. He thinks that it is enough and it’s getting late so he cashed in his chips. Everyone looks mad, especially the man with the flashy jacket, so before Samson leaves he asked for his name and he responded, Artemas. Samson smiles and grabs his money that he won and leaves the bar. 
+<br> Samson reaches his apartment and immediately goes to bed. Only after a short while a loud crash could be heard by Samson’s mother, and she investigates. She walks into the living room to find that Artemas that has broken in. Samson’s mother screams to scare him, sending him into fight or flight mode. Little to the mother’s knowledge, Artemas had a flip knife in his jacket pocket. Artemas, not knowing what he is doing takes the knife out of his pocket and stabs the mother in the stomach three times. He then flees from the scene, leaving the mother to scream for Samson before passing out. As Samson gets up and runs to the living room, he sees a blur of red and something fluffy.
+        </p>
+    </div>
 
-</div>
+    <div id="story">
 
- <div id="intro" class="story">
+    </div>
 
- </div>
-       
-  <script>
+    <div id="buttons">
 
-    let buttonContainer = document.getElementById("buttons");
+    </div>
 
-
-const story = {
-    intro : {
-        text : "Hello my name is Timothy Long and to day I will be flabergasting on yo mama, hahahahaha gang gang, M14 gang hahahahahahahaha very funny yes. ganna cry maybe, or are you going to pee you pants maybe? ",
-
-        choices : ["one", "two", "three"]
-    }
-}
-for(let choice of story.intro.choices){
-    makeButton(choice, choice)
-}
-
-function makeButton(btnText, choice){
-    let button = document.createElement
-    ("button");
-
-    button.innerHTML = btnText;
-
-    buttonContainer.appendChild(button);
-
-    button.addEventListener ("click", function() {
-alert("chose " + choice);
-});
-
-  function showStory(text)  {
-    let storyItem = document.createElement 
-    ("p");
-
-    storyItem.innerText = text;
-
-    storyContainer.appendchild(storyItem);
- 
-}
-}
-
- showStory(story.intro.text)
-</script>
+    <script>
+    
+        let storyContainer = document.getElementById("story");
+    
+        let buttonContainer = document.getElementById("buttons");
+        let history = ["intro"];
+        const story = {
+            intro : {
+                text : "",
+                choices : [
+                    ["Go to page 1", "page1"],
+                    ["Go to page 2", "page2"],
+                    ["Go to page 3", "page3"]
+                ]
+            },
+            page1 : {
+                text : "Faucibus in ornare quam viverra orci sagittis eu. Arcu ac tortor dignissim convallis aenean et. Sodales ut etiam sit amet nisl purus in mollis nunc. Non nisi est sit amet facilisis magna etiam tempor orci. Dignissim sodales ut eu sem integer vitae justo eget. Integer feugiat scelerisque varius morbi enim nunc. Sed felis eget velit aliquet sagittis id consectetur purus. Vitae congue eu consequat ac felis. Non blandit massa enim nec dui. Vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt. Eget nulla facilisi etiam dignissim diam quis. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Neque viverra justo nec ultrices dui sapien eget mi. Sapien et ligula ullamcorper malesuada proin libero nunc. Fermentum et sollicitudin ac orci. Ut eu sem integer vitae justo. Vivamus at augue eget arcu dictum varius duis. Tortor id aliquet lectus proin nibh nisl condimentum.",
+                choices : [
+                    ["Go to page 2", "page2"],
+                    ["Go to page 3", "page3"],
+                    ["Go to page 4", "page4"]
+                ]
+            },
+            page2 : {
+                text : "Faucibus in ornare quam viverra orci sagittis eu. Arcu ac tortor dignissim convallis aenean et. Sodales ut etiam sit amet nisl purus in mollis nunc. Non nisi est sit amet facilisis magna etiam tempor orci. Dignissim sodales ut eu sem integer vitae justo eget. Integer feugiat scelerisque varius morbi enim nunc. Sed felis eget velit aliquet sagittis id consectetur purus. Vitae congue eu consequat ac felis. Non blandit massa enim nec dui. Vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt. Eget nulla facilisi etiam dignissim diam quis. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Neque viverra justo nec ultrices dui sapien eget mi. Sapien et ligula ullamcorper malesuada proin libero nunc. Fermentum et sollicitudin ac orci. Ut eu sem integer vitae justo. Vivamus at augue eget arcu dictum varius duis. Tortor id aliquet lectus proin nibh nisl condimentum.",
+                choices : [
+                    ["Go to page 3", "page3"],
+                    ["Go to page 4", "page4"],
+                    ["Go to page 5", "page5"]
+                ]
+            },
+            page3 : {
+                text : "Interdum velit euismod in pellentesque massa placerat duis. Ut sem nulla pharetra diam sit amet. Suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Tortor aliquam nulla facilisi cras fermentum odio eu. Etiam erat velit scelerisque in. Porta nibh venenatis cras sed felis eget velit aliquet sagittis. Aliquam eleifend mi in nulla. Mus mauris vitae ultricies leo. Cursus in hac habitasse platea dictumst quisque sagittis. Vitae tortor condimentum lacinia quis vel eros. Sem integer vitae justo eget magna fermentum iaculis. Penatibus et magnis dis parturient montes nascetur ridiculus mus. Quam id leo in vitae turpis massa sed elementum tempus. Ultrices gravida dictum fusce ut placerat orci nulla pellentesque. Amet luctus venenatis lectus magna fringilla urna porttitor. Fermentum odio eu feugiat pretium nibh ipsum consequat nisl vel. Pellentesque diam volutpat commodo sed egestas egestas fringilla. Ultrices sagittis orci a scelerisque.",
+                choices : [
+                    ["Go to page 4", "page4"],
+                    ["Go to page 5", "page5"]
+                ]
+            },
+            page4 : {
+                text : "Vitae justo eget magna fermentum iaculis eu non diam. Pellentesque elit eget gravida cum sociis natoque. Et tortor consequat id porta nibh venenatis cras sed felis. Cursus risus at ultrices mi tempus. In ornare quam viverra orci sagittis eu. Sapien nec sagittis aliquam malesuada. Suscipit tellus mauris a diam. Placerat duis ultricies lacus sed turpis tincidunt id aliquet. Egestas tellus rutrum tellus pellentesque. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. Arcu risus quis varius quam quisque id diam vel quam. Aenean euismod elementum nisi quis eleifend quam adipiscing.",
+                choices : [
+                    ["Go to page 5", "page5"]
+                ]
+            },
+            page5 : {
+                text : "Massa tincidunt dui ut ornare lectus. Pretium quam vulputate dignissim suspendisse in est. Aliquet risus feugiat in ante metus. Ullamcorper morbi tincidunt ornare massa. Neque convallis a cras semper auctor neque vitae. In aliquam sem fringilla ut morbi tincidunt augue interdum velit. Amet mauris commodo quis imperdiet massa tincidunt. Leo in vitae turpis massa sed elementum tempus egestas. Praesent elementum facilisis leo vel fringilla est ullamcorper. Eget velit aliquet sagittis id consectetur purus. Ac odio tempor orci dapibus ultrices in iaculis nunc sed. Odio tempor orci dapibus ultrices in iaculis nunc. Semper quis lectus nulla at volutpat diam. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant.",
+                choices : []
+            }
+        }
+        function makeButton(btnText, choice){
+            let button = document.createElement("button");
+            button.innerHTML = btnText;
+            buttonContainer.appendChild(button);
+            button.addEventListener ("click", function() {
+                history.push(choice);
+                showStory();
+            });
+        }
+        function buildStory(text) {
+            let storyItem = document.createElement("p");
+            storyItem.innerText = text;
+            storyContainer.appendChild(storyItem);
+        }
+        function showStory(){
+            let currentPage = history[history.length - 1]; // set currentPage to last index of history array.
+            storyContainer.innerHTML = ""; // reset html
+            buttonContainer.innerHTML = ""; // reset buttons
+            
+            for(let page of history){ // build story text from items in history array
+                buildStory(story[page].text);
+            }
+            
+            for(let choice of story[currentPage].choices){ // build buttons from choices property of most recent story choice
+                makeButton(choice[0], choice[1])
+            }
+        }
+        showStory();
+        
+        
+    </script>
+      
 </body>
 </html>
