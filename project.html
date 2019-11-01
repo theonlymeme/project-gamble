@@ -40,13 +40,8 @@
             intro : {
                 text : "",
                 choices : [
-<<<<<<< HEAD
                     ["chase him", "chase"],
                     ["Call the Cops", "cops"],
-=======
-                    ["Chase him", "chase"],
-                    ["Call the Cops", "stay"],
->>>>>>> ff7fe7bea746746783cd78ad514fae2483d76115
                 ]
             },
             chase : {
@@ -59,13 +54,8 @@
             cops : {
                 text : "Samson’s first thought is to call the police. As his mother lies on the floor injured Samson tries to comfort her while still waiting for the phone to pick up. After three seconds the operator responds and Samson says that his mother was stabbed. They arrived soon after Samson’s mother died. When the paramedics arrive they see Samson crying over his mother's corpse.\n It has been several weeks since the incident and the man with the red jacket still hasn’t been caught. Samson still in shambles quit his job and lived off the money he won from the poker game the day his mother died. He feels like he was guilty because he won that poker match.  While in deep thought Samson got a call from his Uncle Jack.", 
                 choices : [
-<<<<<<< HEAD
                     ["pick up the phone", "funeral"],
                     ["dont pick up the phone", "home"],
-=======
-                    ["Pick up the phone", "page3"],
-                    ["Ignore phone", "page4"],
->>>>>>> ff7fe7bea746746783cd78ad514fae2483d76115
                 ]
             },
             funeral : {
@@ -75,8 +65,8 @@ As they arrived at the funeral, Samson began to cry as all the fun thoughts of h
 When the funeral was done Samson’s tears still rolled down his cheeks. Uncle Jack told everyone to get back in the van, and he drove to his house next to the Peterson Elementary School.
 \n \n After a week of being at Uncle Jack’s house, Samson started to calm down, and not cry as much. Samson was sitting on the couch watching a children's program that Uncle Jack’s children had on. He could hear Uncle Jack and his friends playing something at the table, they were chatting so loudly that it was echoing through the house.`, 
                 choices : [
-                    ["go to page 3", "page3"],
-                    ["Go to page 4", "page4"],
+                    ["check on Uncle Jack", "hello"],
+                    ["stay on the couch", "lazy"],
                 ]
             },
             home : {
@@ -93,8 +83,36 @@ When the funeral was done Samson’s tears still rolled down his cheeks. Uncle J
             hello : {
                 text : `Samson gets up and moves to the dinner table in wonder why they were making such a ruckus. Samson gets up off the leather couch and waddles his way to the table where he could see Uncle Jack and his friends playing a game of poker. Samson sees Uncle Jack with the lowest amount of chips at the table so he tells him to fold. Uncle Jack looks over at Samson and asks if he would like to play?`, 
                 choices : [
-                    ["dont play", "end1"],
+                    ["dont play", "end2"],
                     ["play with them", "skills"],
+                ]
+            },
+            skills : {
+                text : `Samson agrees and Jack’s friends pull up a chair for him. They give him a small amount of chips and they being to deal the cards. Uncle Jack begins to go over the rules with Samson, but Samson interrupts him, acknowledging him that he already knows the rules. So when everything is in accordance they begin to bet. 
+	\n After a couple games Samson hasn’t won, but the next hand he was given was going to be a winner. Samson plays a low amount first, then the cards flip and he has three pairs. He bids a slightly higher amount. Then the final cards flip and suddenly he goes all in, making everyone know that he may have a good hand. 
+	\n Two of Jack’s friends call him while the other fold, including Uncle Jack. In one turn Samson was able to go from the lowest amount at the table to the highest amount at the table. Before they knew it dinner was being made by Uncle Jack’s wife and they had to clear the table. Jack’s friends and their spouses all sat down at the large table to begin eating the feast that Jack’s wife has prepared. 
+	\n Everyone grabbed a spoon full of mashed potatoes, and Jack’s children grabbed the two turkey legs before anyone else. The room was boisterous and the clanking of silverware was muffled by the sounds of laughter and enjoyment. After everyone rinsed their dishes and put them next to the sink. Everyone goes and sits down on the couch except for Uncle Jack and Samson. Uncle Jack wants Samson to take a trip to Vegas and gamble there.
+`, 
+                choices : [
+                    ["That sounds like a lot of work.", "end3"],
+                    ["sure, what's the worst that could happen", "Vegas"],
+                ]
+            },
+            end3 : {
+                text : `Samson knows that if he gets into gambling too much then he will get addicted to it and gamble all his money away. Samson declines the trip with Uncle Jack politely and explains that gambling is a real problem in the world. Not only does gambling ruins families, but it ruins the life of the person playing.
+\n Uncle Jack agrees but is adamant about gambling with him, So Uncle Jack brings his friends over once a week and they have a gambling night. In no time Samson forgives Artemas and what he did,and he visited his mother’s grave every week to change out the flowers. Samson goes on to live a fulfilling life with happiness and a wife that loves him.
+`, 
+                choices : [
+                    // ending 3
+                ]
+            },
+            end2 : {
+                text : `Samson decides that he is done playing poker because of the last poker match he played. So Samson shook his head no and continued to watch as Uncle Jack slowly lost his chips. As he lost, Uncle Jack looked up at Samson and said, “Bud, you need to be more of an extrovert.” 
+	\n So Uncle Jack lifted himself up from the table, grabbed the football, And told Samson to head into the back yard. They start throwing the pigskin around, during Uncle Jack has a deep conversation about Samson’s mother. After Samson knows that being angry won’t bring his mother back, so he forgives Artemas for his actions done that day. Samson, every week since, would go to his mother's grave to change the flowers.  
+	\n \n Samson went on to live a happy life, working in multiple part time jobs until he had enough money to go to college. He then got a degree in finance and got a job in the biggest tech company in the world, Harp Inc.
+`, 
+                choices : [
+                    // ending 2
                 ]
             },
             lazy : {
@@ -102,7 +120,7 @@ When the funeral was done Samson’s tears still rolled down his cheeks. Uncle J
 	Samson would go on to live a happy life with his wife, Margaret. Samson got a degree in Economics and started a job in one of the well known companies in America, Flow Inc. Samson would go to his mother’s grave every week and exchange the flowers that were there. He lived to the ripe old age of 82, where he passed away in his sleep at the hospital.
 `, 
                 choices : [
-                    // ending 1 is pretty sad.
+                    // ending 1
                 ]
             },
         }
