@@ -7,14 +7,22 @@
     <title>Timothy Long</title>
 </head>
 <body>
+<div id="buttons">
+
+</div>
+
  <div id="intro">
 
  </div>
        
   <script>
+
+    let buttonContainer = document.getElementById("buttons");
+
+
 const story = {
     intro : {
-        text : "hi",
+        text : "Hello my name is Timothy Long and to day I will be flabergasting on yo mama, hahahahaha gang gang, M14 gang hahahahahahahaha very funny yes. ganna cry maybe, or are you going to pee you pants maybe? ",
 
         choices : ["one", "two", "three"]
     }
@@ -34,6 +42,18 @@ function makeButton(btnText, choice){
     button.addEventListener ("click", function() {
 alert("chose " + choice);
 }
+
+  function showStory(text){
+    let storyItem = document.createElement 
+    ("p");
+
+    storyItem.innerText = text;
+
+    storyContainer.appendchild(storyItem);
+
+}
+
+ showStory(story.intro.text)
 </script>
 </body>
 </html>
