@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>An Interactive Story</title>
+    <title>Interactive Story</title>
 </head>
 <body>
     
@@ -105,7 +105,7 @@ When the funeral was done Samson’s tears still rolled down his cheeks. Uncle J
                     ["sure, what's the worst that could happen", "Vegas"],
                 ]
             },
-
+// answers below change the context of the story based on the readers feelings.
             Vegas : {
                 text : `Samson decides that it might be a good idea, he can get some spending money for christmas that is a couple months away. Samson allows Uncle Jack to take him to Vegas where a tournament will be held tomorrow at the Venetian Hotel and Casino. Samson quickly packs his bags while Uncle Jack gets the flight tickets. 
     \n  The earliest tickets that Jack was able to get was 2:30 in the afternoon so the would arrive there around 4:30. The tournament starts at 5:00 in the afternoon so they would have to rush down Las Vegas Boulevard to get there on time. As Samson and Uncle Jack board the plane, it has a malfunction and they have to wait two hours for the plane to be fixed. 
@@ -117,24 +117,36 @@ When the funeral was done Samson’s tears still rolled down his cheeks. Uncle J
 `,                
                 choices : [
                     ["answer Artemas", "answer"],
-                    ["don't ansmwe Artemas", "silent"],
+                    ["don't answer Artemas", "silent"],
                 ]
             },
-
+// same as above comment
             answer : {
                 text : `Samson hated his voice, how it was so smooth, and how every word was slurred just a tiny bit. Samson tells Aremas to shut up and pay attention to the game, because the game had just begun and Samson had a motive to play poker. That motive was to see Artemas money deplete faster than a speeding race horse. Artemas gives a little smirk and decides to play 5 black chips, almost two-thirds of what Samson has.  This is a big problem for Samson and he needs to figure out if this was a bluff.`, 
                 choices : [
-                    ["select 1", ""],
-                    ["select 2", ""],
+                    ["check", "check1"],
+                    ["go all in", "end4"],
                 ]
             },
+//same as above comment
             silent : {
                 text : `Samson was too focused on the game, and didn’t want to hear Artemas’s voice. Samson was ready to get back at Artemas. He knows that if a person like Artemas was at a big poker tournament, then he must be in big trouble. Artemas smirks and decided that he would forget about Samson for now. He then plays 5 black chips, that is almost two-thirds of what Samson has. This is a big problem for Samson and he needs to figure out if this was a bluff.`, 
+                choices : [
+                    ["go all in", "end4"],
+                    ["check", "check1"],
+                ]
+            },
+// this will change the 
+            check1 : {
+                text : `Samson decides that, for him to play that large of an amount, then he has to be bluffing, so he checks. Sadly he wasn’t lying and had the higher pair, and that put Samson in a tough position. He has to tread lightly because Artemas, with one large bet, could take all of your money. Artemas laughs and starts to mock Samson for his terrible call. That just made Samson more angry, making him more riled up than ever. 
+\n Artemas, next hand, starts to bet big, without seeing any of the cards and you have a feeling that he may be bluffing again. He could be telling the truth, but it’s too hard to tell over the sound of his laughter.
+`, 
                 choices : [
                     ["select 1", ""],
                     ["select 2", ""],
                 ]
             },
+            
 // below is all the times Uncle Jack calls Samson if he wants to play. because different callings are needed. take path chase, funeral,stay on couch.            
             call1 : {
                 text : `\n As Samson is sitting on the leather couch, he hears Uncle Jacks voice from the other side of the house calling him. Uncle jack wants Samson to play with him.`, 
@@ -146,7 +158,16 @@ When the funeral was done Samson’s tears still rolled down his cheeks. Uncle J
 
 // below is all of the ending sequences that happen in the story.           
 // =========================================================================================================================================================           
-            
+            end4 : {
+                text : `Samson decides that this could be it, the chance to get back for what Artemas has done to his mother. So he decides to go all in as well and the flipping of the cards commence. The suspense in the air begins to rise with every breath, and as that card flips, Samson realized how big of a mistake he has made. Not only did he lose, but Artemas beat him by the higher card. Artemas rejoices, laughing at Samson he takes his two hands and grabs the pot. 
+\n Samson, with his head hung low, walks out of the casino and back to the car. Uncle Jack follows him and tries to comfort him. The money that Samson was playing with that his inheritance from his mother. If she saw what Samson did with it, she would punish him until he knew better. From that day forth he promised that he would never play poker ever again. 
+\n Samson went on to become an economics major in college and getting a good paying job in New York. he did have to leave his mother behind, but this trip would be good for him. Samson found the love of his life in New York and died old with her at the ripe old age of 82.
+`, 
+                choices : [
+                    // ending 4
+                ]
+            },
+
             end3 : {
                 text : `Samson knows that if he gets into gambling too much then he will get addicted to it and gamble all his money away. Samson declines the trip with Uncle Jack politely and explains that gambling is a real problem in the world. Not only does gambling ruins families, but it ruins the life of the person playing.
 Uncle Jack agrees but is adamant about gambling with him, So Uncle Jack brings his friends over once a week and they have a gambling night. In no time Samson forgives Artemas and what he did,and he visited his mother’s grave every week to change out the flowers. Samson goes on to live a fulfilling life with happiness and a wife that loves him.
