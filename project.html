@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>An Interactive Story</title>
+    <title>Interactive Story</title>
 </head>
 <body>
     
@@ -37,13 +37,15 @@
         let buttonContainer = document.getElementById("buttons");
         let history = ["intro"];
         const story = {
+// below both choices lead to Samson going to call the cops      
             intro : {
                 text : "",
                 choices : [
-                    ["Chase him", "chase"],
-                    ["Call the Cops", "stay"],
+                    ["chase him", "chase"],
+                    ["Call the Cops", "cops"],
                 ]
             },
+// the choices below both lead to Samson going to Jack's house
             chase : {
                 text : "Samson decided it’s a smart idea to chase after the man, and runs out of the broken window to catch him. As he is running he can catch a glimpse of the man, Artemas, and Samson starts to run faster. Artemas turns a corner down an alleyway, dropping his pocket knife in the process. Samson stops because he doesn’t want to go into a dark disgusting alleyway without shoes. He sees the knife and picks it up. The knife still had the blood of his mothers on it and the handle was still warm. Samson coming to his senses walks back home still filled with adrenalin from the run. He opens the door to his apartment to find her lifeless body, so Samson decides it’s time to call 9-1-1. The police and the paramedics arrive and they start questioning people. \n  It has been several weeks since the incident and the man with the red jacket still hasn’t been caught. Samson still in shambles quit his job and lived off the money he won from the poker game the day his mother died. He feels like he was guilty because he won that poker match.  While in deep thought Samson got a call from his Uncle Jack.",
                 choices : [
@@ -51,13 +53,15 @@
                     ["Don't pick up the phone", "home"],
                 ]
             },
+// same as above comment
             cops : {
                 text : "Samson’s first thought is to call the police. As his mother lies on the floor injured Samson tries to comfort her while still waiting for the phone to pick up. After three seconds the operator responds and Samson says that his mother was stabbed. They arrived soon after Samson’s mother died. When the paramedics arrive they see Samson crying over his mother's corpse.\n It has been several weeks since the incident and the man with the red jacket still hasn’t been caught. Samson still in shambles quit his job and lived off the money he won from the poker game the day his mother died. He feels like he was guilty because he won that poker match.  While in deep thought Samson got a call from his Uncle Jack.", 
                 choices : [
-                    ["Pick up the phone", "page3"],
-                    ["Ignore phone", "page4"],
+                    ["pick up the phone", "funeral"],
+                    ["dont pick up the phone", "home"],
                 ]
             },
+// choices below can go to move to Uncle Jack and friends, or ending 1
             funeral : {
                 text : `Samson doesn’t want to be rude so he picks up the phone and Uncle Jack's voice soothes Samson. Uncle Jack said, “Hey Pal, I’m coming over. I’m going to pick you up and we will head to the funeral, then after you will stay with me until you get a house of your own. I hope that’s okay?”Samson responds with a subtle hum of approval, and they plan for the pick up.  Samson gets his black suit that he borrowed from his friend, and he gets picked up in a sleek new minivan that Uncle Jack just bought. Uncle Jack's children were in the back playing with toy planes and scribbling on paper, while his wife was in the front seat reading a book. 
 As the children get more rowdy Jack would look in the rear view mirror and tell them to settle down. Samson couldn’t hear his thoughts because the children were drowning out all noise, until Uncle Jack made them be quiet. 
@@ -65,37 +69,132 @@ As they arrived at the funeral, Samson began to cry as all the fun thoughts of h
 When the funeral was done Samson’s tears still rolled down his cheeks. Uncle Jack told everyone to get back in the van, and he drove to his house next to the Peterson Elementary School.
 \n \n After a week of being at Uncle Jack’s house, Samson started to calm down, and not cry as much. Samson was sitting on the couch watching a children's program that Uncle Jack’s children had on. He could hear Uncle Jack and his friends playing something at the table, they were chatting so loudly that it was echoing through the house.`, 
                 choices : [
-                    ["go to page 3", "page3"],
-                    ["Go to page 4", "page4"],
+                    ["check on Uncle Jack", "hello"],
+                    ["stay on the couch", "call1"],
                 ]
             },
+// same as above comment
             home : {
                 text : `Samson just wanted to get away from people just a little bit longer so he let the phone ring. Samson looked down at the blood that dried into the carpet and decided that he didn’t want to be there anymore. So Samson took a walk to the park and sat at the swings to cry, leaving his phone at home. 
-	As he sat there, he could hear the roar of cars on the highway in the distance and started to cry. Being on the swing reminded of him getting pushed on the swing by his mother when he was young. He jumped off and decided that the park would be too much, so he walked back to the apartment. 
-	As he arrived to the steps of the house that reminded him of his mother waving at him at the top of the stairs and he started to cry again. He sat at the bottom of the stairs and cried until a black minivan arrived to pick him up. A man stepped out of the driver's seat and as he came into Samson’s view he realized that it was Uncle Jack. 
-	Uncle Jack knelt down to met Samson’s eyes and comforted him. Uncle Jack shared a hug with Samson, and after a while Samson was ready to go into the van. Uncle Jack took Samson to his house where he would stay. Uncle Jack’s house is right next to Peterson Elementary School, and that was the elementary school Samson went too when he was young. 
+    As he sat there, he could hear the roar of cars on the highway in the distance and started to cry. Being on the swing reminded of him getting pushed on the swing by his mother when he was young. He jumped off and decided that the park would be too much, so he walked back to the apartment. 
+    As he arrived to the steps of the house that reminded him of his mother waving at him at the top of the stairs and he started to cry again. He sat at the bottom of the stairs and cried until a black minivan arrived to pick him up. A man stepped out of the driver's seat and as he came into Samson’s view he realized that it was Uncle Jack. 
+    Uncle Jack knelt down to met Samson’s eyes and comforted him. Uncle Jack shared a hug with Samson, and after a while Samson was ready to go into the van. Uncle Jack took Samson to his house where he would stay. Uncle Jack’s house is right next to Peterson Elementary School, and that was the elementary school Samson went too when he was young. 
     \n \n After a week of being at Uncle Jack’s house, Samson started to calm down, and not cry as much. Samson was sitting on the couch watching a children's program that Uncle Jack’s children had on. He could hear Uncle Jack and his friends playing something at the table, they were chatting so loudly that it was echoing through the house.`, 
                 choices : [
                     ["check on Uncle Jack", "hello"],
-                    ["stay on the couch", "lazy"],
+                    ["stay on the couch", "call1"],
                 ]
             },
+// choices below could play with uncle jack, or go to ending 2
             hello : {
                 text : `Samson gets up and moves to the dinner table in wonder why they were making such a ruckus. Samson gets up off the leather couch and waddles his way to the table where he could see Uncle Jack and his friends playing a game of poker. Samson sees Uncle Jack with the lowest amount of chips at the table so he tells him to fold. Uncle Jack looks over at Samson and asks if he would like to play?`, 
                 choices : [
-                    ["dont play", "end1"],
+                    ["dont play", "end2"],
                     ["play with them", "skills"],
                 ]
             },
-            lazy : {
-                text : `Samson feeling like his mother’s death was his fault realized that he shouldn’t play anymore. It hurt him enough and Samson told Uncle Jack that he doesn’t want to play. Uncle Jack thrugged and went back to the poker game that he was losing.  Samson realized that he doesn’t need to play poker anymore because he has everything he needs with Uncle Jack and decides to forgive Artemas for what he has done. 
-	Samson would go on to live a happy life with his wife, Margaret. Samson got a degree in Economics and started a job in one of the well known companies in America, Flow Inc. Samson would go to his mother’s grave every week and exchange the flowers that were there. He lived to the ripe old age of 82, where he passed away in his sleep at the hospital.
+// choices below could make you move to vegas, if not go to ending 3
+            skills : {
+                text : `Samson agrees and Jack’s friends pull up a chair for him. They give him a small amount of chips and they being to deal the cards. Uncle Jack begins to go over the rules with Samson, but Samson interrupts him, acknowledging him that he already knows the rules. So when everything is in accordance they begin to bet. 
+    \n After a couple games Samson hasn’t won, but the next hand he was given was going to be a winner. Samson plays a low amount first, then the cards flip and he has three pairs. He bids a slightly higher amount. Then the final cards flip and suddenly he goes all in, making everyone know that he may have a good hand. 
+    \n Two of Jack’s friends call him while the other fold, including Uncle Jack. In one turn Samson was able to go from the lowest amount at the table to the highest amount at the table. Before they knew it dinner was being made by Uncle Jack’s wife and they had to clear the table. Jack’s friends and their spouses all sat down at the large table to begin eating the feast that Jack’s wife has prepared. 
+    \n Everyone grabbed a spoon full of mashed potatoes, and Jack’s children grabbed the two turkey legs before anyone else. The room was boisterous and the clanking of silverware was muffled by the sounds of laughter and enjoyment. After everyone rinsed their dishes and put them next to the sink. Everyone goes and sits down on the couch except for Uncle Jack and Samson. Uncle Jack wants Samson to take a trip to Vegas and gamble there.
 `, 
                 choices : [
-                    // ending 1 is pretty sad.
+                    ["That sounds like a lot of work.", "end3"],
+                    ["sure, what's the worst that could happen", "Vegas"],
+                ]
+            },
+// answers below change the context of the story based on the readers feelings.
+            Vegas : {
+                text : `Samson decides that it might be a good idea, he can get some spending money for christmas that is a couple months away. Samson allows Uncle Jack to take him to Vegas where a tournament will be held tomorrow at the Venetian Hotel and Casino. Samson quickly packs his bags while Uncle Jack gets the flight tickets. 
+    \n  The earliest tickets that Jack was able to get was 2:30 in the afternoon so the would arrive there around 4:30. The tournament starts at 5:00 in the afternoon so they would have to rush down Las Vegas Boulevard to get there on time. As Samson and Uncle Jack board the plane, it has a malfunction and they have to wait two hours for the plane to be fixed. 
+    \n  Samson knowing that he might be late, decides to go because this trip can’t hurt him, at least not like Artemas did. So after the plane was fixed they got in and flew to Vegas where the tournament was being held. Uncle Jack drives down the traffic filled road to the Venetian Hotel and Casino. He gives his car to the valet, and they both rush inside to find a room covered in poker tables, flashing lights, and the color red everywhere.
+    \n  Samson walks to one of the tables and finds Artemas with a large amount of chips. Out of shock Samson just stood there, not thinking or breathing. Artemas looks up to find Samson standing there, and he begins to sweat. Knowing that Artemas may do something dangerous Samson walks away slowly, and Artemas slowly turns his head back to the table. 
+    \n  Samson takes a step outside and begins to hyperventilate as all the memories start rushing back into his mind. His mother on her back, bleeding on the carpet. Artemas’s red flashy coat as he runs out of the door of his apartment. As he starts to remember all of these events his eyes begin to water. Uncle Jack walks outside to find Samson whimpering in his hands. 
+\n  He walks up to Samson and starts to comfort him with a warm hug. As Samson gets held in Uncle Jack's arms he calms down and is ready to go back in. As they enter back into the casino, they sign up for the tournament. Artemas sees this and immediately tells the dealer that he can’t join because the tournament has already started. Luckily for Samson the dealer said that it was perfectly legal for Samson to get into the tournament early. He would already be at a disadvantage because he would have less chips than the other players.
+\n  Samson decided that this game was personal and wanted to see Artemas crumble. Samson sat down next to him, Artemas’s mountain of chips casted a shadow on Samson’s chips. Artemas asked Samson about the condition of his mother knowing he will get on your nerve.
+`,                
+                choices : [
+                    ["answer Artemas", "answer"],
+                    ["don't answer Artemas", "silent"],
+                ]
+            },
+// same as above comment
+            answer : {
+                text : `Samson hated his voice, how it was so smooth, and how every word was slurred just a tiny bit. Samson tells Aremas to shut up and pay attention to the game, because the game had just begun and Samson had a motive to play poker. That motive was to see Artemas money deplete faster than a speeding race horse. Artemas gives a little smirk and decides to play 5 black chips, almost two-thirds of what Samson has.  This is a big problem for Samson and he needs to figure out if this was a bluff.`, 
+                choices : [
+                    ["check", "check1"],
+                    ["go all in", "end4"],
+                ]
+            },
+//same as above comment
+            silent : {
+                text : `Samson was too focused on the game, and didn’t want to hear Artemas’s voice. Samson was ready to get back at Artemas. He knows that if a person like Artemas was at a big poker tournament, then he must be in big trouble. Artemas smirks and decided that he would forget about Samson for now. He then plays 5 black chips, that is almost two-thirds of what Samson has. This is a big problem for Samson and he needs to figure out if this was a bluff.`, 
+                choices : [
+                    ["go all in", "end4"],
+                    ["check", "check1"],
+                ]
+            },
+// this will change the 
+            check1 : {
+                text : `Samson decides that, for him to play that large of an amount, then he has to be bluffing, so he checks. Sadly he wasn’t lying and had the higher pair, and that put Samson in a tough position. He has to tread lightly because Artemas, with one large bet, could take all of your money. Artemas laughs and starts to mock Samson for his terrible call. That just made Samson more angry, making him more riled up than ever. 
+\n Artemas, next hand, starts to bet big, without seeing any of the cards and you have a feeling that he may be bluffing again. He could be telling the truth, but it’s too hard to tell over the sound of his laughter.
+`, 
+                choices : [
+                    ["select 1", ""],
+                    ["select 2", ""],
+                ]
+            },
+            
+// below is all the times Uncle Jack calls Samson if he wants to play. because different callings are needed. take path chase, funeral,stay on couch.            
+            call1 : {
+                text : `\n As Samson is sitting on the leather couch, he hears Uncle Jacks voice from the other side of the house calling him. Uncle jack wants Samson to play with him.`, 
+                choices : [
+                    ["don't play", "end2"],
+                    ["play with them", "skills"],
+                ]
+            },
+
+// below is all of the ending sequences that happen in the story.           
+// =========================================================================================================================================================           
+            end4 : {
+                text : `Samson decides that this could be it, the chance to get back for what Artemas has done to his mother. So he decides to go all in as well and the flipping of the cards commence. The suspense in the air begins to rise with every breath, and as that card flips, Samson realized how big of a mistake he has made. Not only did he lose, but Artemas beat him by the higher card. Artemas rejoices, laughing at Samson he takes his two hands and grabs the pot. 
+\n Samson, with his head hung low, walks out of the casino and back to the car. Uncle Jack follows him and tries to comfort him. The money that Samson was playing with that his inheritance from his mother. If she saw what Samson did with it, she would punish him until he knew better. From that day forth he promised that he would never play poker ever again. 
+\n Samson went on to become an economics major in college and getting a good paying job in New York. he did have to leave his mother behind, but this trip would be good for him. Samson found the love of his life in New York and died old with her at the ripe old age of 82.
+`, 
+                choices : [
+                    // ending 4
+                ]
+            },
+
+            end3 : {
+                text : `Samson knows that if he gets into gambling too much then he will get addicted to it and gamble all his money away. Samson declines the trip with Uncle Jack politely and explains that gambling is a real problem in the world. Not only does gambling ruins families, but it ruins the life of the person playing.
+Uncle Jack agrees but is adamant about gambling with him, So Uncle Jack brings his friends over once a week and they have a gambling night. In no time Samson forgives Artemas and what he did,and he visited his mother’s grave every week to change out the flowers. Samson goes on to live a fulfilling life with happiness and a wife that loves him.
+`, 
+                choices : [
+                    // ending 3
+                ]
+            },
+            end2 : {
+                text : `Samson decides that he is done playing poker because of the last poker match he played. So Samson shook his head no and continued to watch as Uncle Jack slowly lost his chips. As he lost, Uncle Jack looked up at Samson and said, “Bud, you need to be more of an extrovert.” 
+    \n So Uncle Jack lifted himself up from the table, grabbed the football, And told Samson to head into the back yard. They start throwing the pigskin around, during Uncle Jack has a deep conversation about Samson’s mother. After Samson knows that being angry won’t bring his mother back, so he forgives Artemas for his actions done that day. Samson, every week since, would go to his mother's grave to change the flowers.  
+    \n \n Samson went on to live a happy life, working in multiple part time jobs until he had enough money to go to college. He then got a degree in finance and got a job in the biggest tech company in the world, Harp Inc.
+`, 
+                choices : [
+                    // ending 2
+                ]
+            },
+            end1 : {
+                text : `Samson feeling like his mother’s death was his fault realized that he shouldn’t play anymore. It hurt him enough and Samson told Uncle Jack that he doesn’t want to play. Uncle Jack thrugged and went back to the poker game that he was losing.  Samson realized that he doesn’t need to play poker anymore because he has everything he needs with Uncle Jack and decides to forgive Artemas for what he has done. 
+   \n  Samson would go on to live a happy life with his wife, Margaret. Samson got a degree in Economics and started a job in one of the well known companies in America, Flow Inc. Samson would go to his mother’s grave every week and exchange the flowers that were there. He lived to the ripe old age of 82, where he passed away in his sleep at the hospital.
+`, 
+                choices : [
+                    // ending 1
                 ]
             },
         }
+        // below is the button making functions, don't touch anything here
         function makeButton(btnText, choice){
             let button = document.createElement("button");
             button.innerHTML = btnText;
@@ -129,4 +228,5 @@ When the funeral was done Samson’s tears still rolled down his cheeks. Uncle J
     </script>
       
 </body>
-</html> 
+</html>
+ 
