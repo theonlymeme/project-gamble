@@ -29,11 +29,6 @@
     <div id="buttons">
 
     </div>
-<div id = "coinFlip">
-    <button id="click" type="button">CLICK ME</button>
-    <p>
-        You got: <span id="result"></span>
-    </p></div>
     <script>
     
         let storyContainer = document.getElementById("story");
@@ -136,26 +131,61 @@ When the funeral was done Samson’s tears still rolled down his cheeks. Uncle J
             silent : {
                 text : `Samson was too focused on the game, and didn’t want to hear Artemas’s voice. Samson was ready to get back at Artemas. He knows that if a person like Artemas was at a big poker tournament, then he must be in big trouble. Artemas smirks and decided that he would forget about Samson for now. He then plays 5 black chips, that is almost two-thirds of what Samson has. This is a big problem for Samson and he needs to figure out if this was a bluff.`, 
                 choices : [
-                    ["Check", ""],
-                    ["Fold", ""],
+                    ["Check", "check2"],
+                    ["Fold", "foldQuestioning"],
                 ]
             },
+            foldQuestioning : {
+                text : `Samson figures that if he were to bid that then he has something good, so he folds. Luckily Samson was right, Artemas looked a little angry but calmed down quickly. This was Samson’s time to retaliate, so he waited for his next hand and decided it was the perfect time too bluff. Samson put in a red chip and Artemas followed, then he put in three green chips and Artemas did as well, when the last card was flipped Samson smiled intentionally. He then placed 2 of his 3 black chips in.
+\n	Artemas is perplexed of his actions, but he knows that if he doesn’t figure out what happens he has to put up 3 of his 6 black chips. Samson begins to see the change in Artemas. He began to tap his foot and scratching his head while he is trying to understand why Samson bid so high. Artemas then folded thinking that Samson had a good hand, but he didn’t have anything. Now Samson was up a few more chips. 
+\n	Artemas was visibly angry and Samson knew that if he did that a few more times then he would burst like a bubble. As the rounds go on Samson became steadily more rich and Artemas had a vein bulging out from his head. Samson then quickly put in the only 2 black chips he had. With no cards flipped Samson had to play is risky for Artemas to make a miss play. Artemas was very confused so he decided to strike up a conversation with Samson. 
+\n	Artemas wanted to know what Samson’s cards were, so Samson tucked his cards underneath his chips. 
+`, 
+                choices : [
+                    ["Answer", "answer3"],
+                    ["Don't Answer", "dontAnswer3"],
+                ]
+            },
+            answer3 : {
+                text : `Samson tells Artemas not to worry, and that he just needs to calm down before he goes on another murder spree. That made Artemas really angry, and in a blind rage he goes all in. He then begins to call himself stupid and hits his forehead repeatidly. His mental health was slowly deteriorating and Ssamson could see that. He used that to his advantage and made him go all in. Now it was finally Samson’s chance, but there was still a chance that he could lose. 
+`,
+                choices : [
+
+                ]
+            },
+                dontAnswer3 : {
+                text : `Samson realizes that he shouldn't anger Artemas, so he doesn't say a thing. This does in turn make Artemas more angry, making him go all in. Samson now has the biggest choice in his life, either go all in and call his bluff, or fold and let him have the little chips Samson put in.`,
+ 
+                choices : [
+                    ["Answer", "answer3"],
+                    ["Don't Answer", "dontAnswer3"],
+                ]
+            },
+
 // this will change the 
             check1 : {
                 text : `Samson decides that, for him to play that large of an amount, then he has to be bluffing, so he checks. Sadly he wasn’t lying and had the higher pair, and that put Samson in a tough position. He has to tread lightly because Artemas, with one large bet, could take all of his money. Artemas laughs and starts to mock Samson for his terrible call. That just made Samson more angry, making him more riled up than ever. 
 \n Artemas, next hand, starts to bet big, without seeing any of the cards and you have a feeling that he may be bluffing again. He could be telling the truth, but it’s too hard to tell over the sound of his laughter. `,
  //start...
                 choices : [
-                    ["Check", "Goes All In"],
+                    ["Check", "GoesAllin"],
                     ["Fold", "CoinFlip"],
+                ]
+            },
+            GoesAllin : {
+                text : `Samson decides that this could be it, the chance to get back for what Artemas has done to his mother. So he decides to go all in as well and the flipping of the cards commence. The suspense in the air begins to rise with every breath, and as that card flips, Samson realized how big of a mistake he has made. Not only did he lose, but Artemas beat him by the higher card. Artemas rejoices, laughing at Samson he takes his two hands and grabs the pot. 
+Now Samson is in the biggest bind of his life, any move he does from here on will make him lose all of his money. Samson needs to feel determined to win, and want to win, not just for his mother, but to make Artemas feel defeated.`,
+                choices : [
+                    ["",""],
+                    ["",""],
                 ]
             },
             check2 : {
                 text : `Samson decides that this could be it, the chance to get back for what Artemas has done to his mother. So he decides to go all in as well and the flipping of the cards commence. The suspense in the air begins to rise with every breath, and as that card flips, Samson realized how big of a mistake he has made. Not only did he lose, but Artemas beat him by the higher card. Artemas rejoices, laughing at Samson he takes his two hands and grabs the pot. 
 \n Now Samson is in the biggest bind of his life, any move he does from here on will make him lose all of his money. Samson needs to feel determined to win, and want to win, not just for his mother, but to make Artemas feel defeated. `,
                 choices : [    
-                    ["Select 1", "endGame"],
-                    ["Select 2", "endGame"],      
+                    ["hello", "endGame"],
+                    ["world", "endGame"],      
               ]
             },  
 //next block
@@ -212,16 +242,20 @@ When the funeral was done Samson’s tears still rolled down his cheeks. Uncle J
                 ]
             },
             CoinflipWin : { 
-                text : ``,
+                text : `CoinFlip Win`,
                 choices : [
                     ["fold", ""],
                     ["check", ""],
                 ]
             },
+
 // below is all of the ending sequences that happen in the story.           
-// =========================================================================================================================================================           
+
+// ======================================================================================================================================================           
 CoinFlipEnd : { 
-                text : ``,
+                text : `Samson realizing the gamble that he just lost and hangs his head down low as Artemas laughs at him. Artemas picks up all the chips and sets them on the already large stack of chips he has, increasing the size of the mountain by just a few inches. Samson gets up from the table and falls into the arms of Uncle Jack and he begins to cry. What Samson just lost was the inheritance he got from his mother’s death.
+\n	Samson looks up at Artemas one last time, and he sees Artemas hugging the large stack of chips on the table. That day Samson made a promise to himself that he wouldn’t make a gamble ever again. After that day, Samson went on to get an economics degree and started a job at Fleck Inc. and decided to live a secluded life. He lived on his own until the age of 80, then he went to a retirement home where he died at the ripe age of 82.
+`,
                 choices : [
                     // ending for minigame, ending 5
                 ]
