@@ -29,7 +29,11 @@
     <div id="buttons">
 
     </div>
-
+<div id = "coinFlip">
+    <button id="click" type="button">CLICK ME</button>
+    <p>
+        You got: <span id="result"></span>
+    </p></div>
     <script>
     
         let storyContainer = document.getElementById("story");
@@ -170,10 +174,59 @@ When the funeral was done Samson’s tears still rolled down his cheeks. Uncle J
                     ["Play with them", "skills"],
                 ]
             },
-            
+// below is coinflip Minigame.
+//================================================================================================
+            Coinflip0 : { 
+                text : `This is Samson's biggest game, he can't lose to someone like Artemas.`,
+                choices : [
+                    ["fold", "coinflip2"],
+                    ["check", "coinflip1"],
+                ]
+            },
+            Coinflip1 : { 
+                text : `good keep going`,
+                choices : [
+                    ["fold", "coinflip2"],
+                    ["check", "coinFlipEnd"],
+                ]
+            },
+            Coinflip2 : { 
+                text : `awesome, you are almost there`,
+                choices : [
+                    ["fold", "coinflip2"],
+                    ["check", "coinFlipDeathClose"],
+                ]
+            },
+            coinFlipDeathClose : { 
+                text : `As Samson checks, he realizes that what he has done is risky, and it bites him in the butt. you can't have another messup like that.`,
+                choices : [
+                    ["fold", "coinflip3"],
+                    ["check", "CoinFlipEnd"],
+                ]
+            },
+            Coinflip3 : { 
+                text : `awesome, you are almost there`,
+                choices : [
+                    ["fold", "coinflip2"],
+                    ["check", "coinflipWin"],
+                ]
+            },
+            CoinflipWin : { 
+                text : ``,
+                choices : [
+                    ["fold", ""],
+                    ["check", ""],
+                ]
+            },
 // below is all of the ending sequences that happen in the story.           
 // =========================================================================================================================================================           
-            end4 : {
+CoinFlipEnd : { 
+                text : ``,
+                choices : [
+                    // ending for minigame, ending 5
+                ]
+            },
+           end4 : {
                 text : `Samson decides that this could be it, the chance to get back for what Artemas has done to his mother. So he decides to go all in as well and the flipping of the cards commence. The suspense in the air begins to rise with every breath, and as that card flips, Samson realized how big of a mistake he has made. Not only did he lose, but Artemas beat him by the higher card. Artemas rejoices, laughing at Samson he takes his two hands and grabs the pot. 
 \n Samson, with his head hung low, walks out of the casino and back to the car. Uncle Jack follows him and tries to comfort him. The money that Samson was playing with that his inheritance from his mother. If she saw what Samson did with it, she would punish him until he knew better. From that day forth he promised that he would never play poker ever again. 
 \n Samson went on to become an economics major in college and getting a good paying job in New York. he did have to leave his mother behind, but this trip would be good for him. Samson found the love of his life in New York and died old with her at the ripe old age of 82.
@@ -238,8 +291,7 @@ Uncle Jack agrees but is adamant about gambling with him, So Uncle Jack brings h
             }
         }
         showStory();
-        
-        
+
     </script>
       
 </body>
