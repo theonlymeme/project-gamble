@@ -139,14 +139,29 @@ When the funeral was done Samson’s tears still rolled down his cheeks. Uncle J
 // this will change the 
             check1 : {
                 text : `Samson decides that, for him to play that large of an amount, then he has to be bluffing, so he checks. Sadly he wasn’t lying and had the higher pair, and that put Samson in a tough position. He has to tread lightly because Artemas, with one large bet, could take all of his money. Artemas laughs and starts to mock Samson for his terrible call. That just made Samson more angry, making him more riled up than ever. 
-\n Artemas, next hand, starts to bet big, without seeing any of the cards and you have a feeling that he may be bluffing again. He could be telling the truth, but it’s too hard to tell over the sound of his laughter.
-`, 
+\n Artemas, next hand, starts to bet big, without seeing any of the cards and you have a feeling that he may be bluffing again. He could be telling the truth, but it’s too hard to tell over the sound of his laughter. `,
+ //start...
                 choices : [
                     ["Check", "Goes All In"],
                     ["Fold", "CoinFlip"],
                 ]
             },
-            
+            check2 : {
+                text : `Samson decides that this could be it, the chance to get back for what Artemas has done to his mother. So he decides to go all in as well and the flipping of the cards commence. The suspense in the air begins to rise with every breath, and as that card flips, Samson realized how big of a mistake he has made. Not only did he lose, but Artemas beat him by the higher card. Artemas rejoices, laughing at Samson he takes his two hands and grabs the pot. 
+\n Now Samson is in the biggest bind of his life, any move he does from here on will make him lose all of his money. Samson needs to feel determined to win, and want to win, not just for his mother, but to make Artemas feel defeated. `,
+                choices : [    
+                    ["Select 1", "endGame"],
+                    ["Select 2", "endGame"],      
+              ]
+            },  
+//next block
+            fold2 : {
+                text : `Samson knew that Artemas wouldn’t bluff, and he folded. Good thing too because Artemas wasn’t bluffing, so now Samson have a chance to get back at Artemas. Samson needs to put in a large amount every game he plays into he has enough chips to get back at aremas. All of his money counted on these next few games to get back at Artemas for killing his mother. `, 
+                choices : [
+                    ["Select 1", "option 1"],
+                    ["select 2", "option 2"], 
+                ]
+            },
 // below is all the times Uncle Jack calls Samson if he wants to play. because different callings are needed. take path chase, funeral,stay on couch.            
             call1 : {
                 text : `\n As Samson is sitting on the leather couch, he hears Uncle Jacks voice from the other side of the house calling him. Uncle jack wants Samson to play with him.`, 
