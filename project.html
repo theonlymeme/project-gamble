@@ -147,18 +147,19 @@ When the funeral was done Samson’s tears still rolled down his cheeks. Uncle J
                 ]
             },
             answer3 : {
-                text : `Samson tells Artemas not to worry, and that he just needs to calm down before he goes on another murder spree. That made Artemas really angry, and in a blind rage he goes all in. He then begins to call himself stupid and hits his forehead repeatidly. His mental health was slowly deteriorating and Ssamson could see that. He used that to his advantage and made him go all in. Now it was finally Samson’s chance, but there was still a chance that he could lose. 
+                text : `Samson tells Artemas not to worry, and that he just needs to calm down before he goes on another murder spree. That made Artemas really angry, and in a blind rage he goes all in. He then begins to call himself stupid and hits his forehead repeatidly. His mental health was slowly deteriorating and Samson could see that. He used that to his advantage and made him go all in. Now it was finally Samson’s chance, but there was still a chance that he could lose. 
 `,
                 choices : [
-
+                    ["check", "check2"],
+                    ["fold", ""],
                 ]
             },
                 dontAnswer3 : {
                 text : `Samson realizes that he shouldn't anger Artemas, so he doesn't say a thing. This does in turn make Artemas more angry, making him go all in. Samson now has the biggest choice in his life, either go all in and call his bluff, or fold and let him have the little chips Samson put in.`,
  
                 choices : [
-                    ["Answer", "answer3"],
-                    ["Don't Answer", "dontAnswer3"],
+                    ["", ""],
+                    ["", ""],
                 ]
             },
 
@@ -169,14 +170,14 @@ When the funeral was done Samson’s tears still rolled down his cheeks. Uncle J
  //start...
                 choices : [
                     ["Check", "GoesAllin"],
-                    ["Fold", "CoinFlip"],
+                    ["Fold", "Coinflip0"],
                 ]
             },
             GoesAllin : {
                 text : `Samson decides that this could be it, the chance to get back for what Artemas has done to his mother. So he decides to go all in as well and the flipping of the cards commence. The suspense in the air begins to rise with every breath, and as that card flips, Samson realized how big of a mistake he has made. Not only did he lose, but Artemas beat him by the higher card. Artemas rejoices, laughing at Samson he takes his two hands and grabs the pot. 
 Now Samson is in the biggest bind of his life, any move he does from here on will make him lose all of his money. Samson needs to feel determined to win, and want to win, not just for his mother, but to make Artemas feel defeated.`,
                 choices : [
-                    ["Check","Coinflip1"],
+                    ["Check","Coinflip0"],
                     ["Fold","CoinFlipEnd"],
                 ]
             },
@@ -187,7 +188,14 @@ Now Samson is in the biggest bind of his life, any move he does from here on wil
                     ["hello", "endGame"],
                     ["world", "endGame"],      
               ]
-            },  
+            }, 
+            endGame : {
+                text : `Samson now feels like he needs to take those chips away from him. Artemas looks over at Samson and give him a mean stare. Samson tells Artemas that he will pay for the funeral of his mother with his chips. This angers Artemas from the point of no return, and he lifts his hand and slams it on the table. Everyone jumped in there seats and his hands push all of his chips in the pot again.`,
+                choices : [    
+                    ["go all in with Artemas!", "GTA"],
+                    ["you can't win this!", "finalGamble"],      
+              ]
+            }, 
 //next block
             fold2 : {
                 text : `Samson knew that Artemas wouldn’t bluff, and he folded. Good thing too because Artemas wasn’t bluffing, so now Samson have a chance to get back at Artemas. Samson needs to put in a large amount every game he plays into he has enough chips to get back at aremas. All of his money counted on these next few games to get back at Artemas for killing his mother. `, 
@@ -209,49 +217,100 @@ Now Samson is in the biggest bind of his life, any move he does from here on wil
             Coinflip0 : { 
                 text : `This is Samson's biggest game, he can't lose to someone like Artemas.`,
                 choices : [
-                    ["fold", "coinflip2"],
+                    ["fold", "Coinflip2"],
                     ["check", "coinflip1"],
                 ]
             },
             Coinflip1 : { 
                 text : `good keep going`,
                 choices : [
-                    ["fold", "coinflip2"],
+                    ["fold", "Coinflip3"],
                     ["check", "coinFlipEnd"],
                 ]
             },
             Coinflip2 : { 
                 text : `awesome, you are almost there`,
                 choices : [
-                    ["fold", "coinflip2"],
+                    ["fold", "Coinflip1"],
                     ["check", "coinFlipDeathClose"],
                 ]
             },
             coinFlipDeathClose : { 
                 text : `As Samson checks, he realizes that what he has done is risky, and it bites him in the butt. you can't have another messup like that.`,
                 choices : [
-                    ["fold", "coinflip3"],
+                    ["fold", "Coinflip3"],
                     ["check", "CoinFlipEnd"],
                 ]
             },
             Coinflip3 : { 
                 text : `awesome, you are almost there`,
                 choices : [
-                    ["fold", "coinflip2"],
+                    ["fold", "Coinflip2"],
                     ["check", "coinflipWin"],
                 ]
             },
             CoinflipWin : { 
-                text : `CoinFlip Win`,
+                text : `Artemas is perplexed of his actions, but he knows that if he doesn’t figure out what happens he has to put up 3 of his 6 black chips. Samson begins to see the change in Artemas. He began to tap his foot and scratching his head while he is trying to understand why Samson bid so high. Artemas then folded thinking that Samson had a good hand, but he didn’t have anything. Now Samson was up a few more chips. 
+	\n Artemas was visibly angry and Samson knew that if he did that a few more times then he would burst like a bubble. As the rounds go on Samson became steadily more rich and Artemas had a vein bulging out from his head. Samson then quickly put in the only 2 black chips he had. With no cards flipped Samson had to play is risky for Artemas to make a miss play. Artemas was very confused so he decided to strike up a conversation with Samson. 
+	\n Artemas wanted to know what Samson’s cards were, so Samson tucked his cards underneath his chips. 
+`,
                 choices : [
-                    ["fold", ""],
-                    ["check", ""],
+                    ["Answer", "answer3"],
+                    ["don't answer", "dontAnswer3"],
                 ]
             },
-
+// below is the Final Gamble, I'm giving this section it's own part because it is a big portion of the story.
+//======================================================================================================================================================================
+finalGamble : { 
+                text : `This is Samson's chance of winning, everything rides on this bet.`,
+                choices : [
+                    ["check", "GTA"],
+                    ["fold", "finalGamble1"],
+                ]
+            },
+finalGamble1 : { 
+        text : `Samson was able to notice that Artemas was going to win and folds. This bet going to determine it all.`,
+            choices : [
+                ["check", "finalGambleWin"],
+                ["fold", "finalGamble2"],
+            ]
+        },
+finalGamble2 : { 
+        text : `Samson realizes that he has another good hand and folds, just on random luck, too bad he missed his chance.`,
+            choices : [
+                ["check", "finalGambleWin"],
+                ["fold", "finalGamble3"],
+            ]
+        },
+finalGamble3 : { 
+        text : `Samson realizes that you could win at any moment just doesn't want to for Artemas's sake.`,
+            choices : [
+                ["check", "finalGambleWin"],
+                ["fold", "finalGamble3"],
+            ]
+        },
+finalGambleWin : { 
+        text : `Samson follows Artemas to the bitter end, and was able to catch his bluff. Samson was able to take all of Artemas’s chips and Artemas isn’t happy about it. Artemas gets up out of his seat, and slams his hands on the table. He then begins to throw a tantrum, grabbing his cards and throwing them at the dealer. He throws himself on Samson and starts to hit him. 
+	\n The Body Guards had to pry Artemas off Samson and throw him out. Samson went on to win the tournament, but didn’t decide to keep playing. He realized that gambling is a terrible addiction and if you get too attached to it then it can rot your brain, just like Artemas’s. Samson went on to get an economic degree and started his job at a new company that just sky rocked, Farklet Inc.
+`,
+            choices : [
+                // true ending 1
+            ]
+        },
 // below is all of the ending sequences that happen in the story.           
 
 // ======================================================================================================================================================           
+GTA : {
+                text : `Samson was surprised, he thought he had a full proof plan of winning the tournament but somewhere along the line he messed up. He feels like Uncle Jack made him bid that much, but didn’t understand why he just bid all of his money away. Samson gets up and Artemas stands up with him. Artemas stares down at Samson, and Samson didn’t like how Artemas was staring at him.
+\n Samson then landed a right hook, right on Artemas’s jaw making him fall to the floor. Artemas gets up and swings again, but before it could hit the body guards stop him and throw them both out. Outside Artemas goes in for another swing and hits Samson right in the nose. 
+\n Samson then swings and hits Artemas on the side of his head, rattling his brain, and knocking him out. Samson then grabbed a car from the street, broke a window to get in, and hot wired the car. As he starts to drive away he get a wanted level.
+\n Realizing this, you press up on the D-pad and move to lester. You press the X-button and press the A-button to clear your wanted level. You then maneuver the video game car to reach the mission’s end, and after the cutscene you close the game
+`,
+                choices : [    
+                    // secret ending, ending 6    
+              ]
+            },
+
 CoinFlipEnd : { 
                 text : `Samson realizing the gamble that he just lost and hangs his head down low as Artemas laughs at him. Artemas picks up all the chips and sets them on the already large stack of chips he has, increasing the size of the mountain by just a few inches. Samson gets up from the table and falls into the arms of Uncle Jack and he begins to cry. What Samson just lost was the inheritance he got from his mother’s death.
 \n	Samson looks up at Artemas one last time, and he sees Artemas hugging the large stack of chips on the table. That day Samson made a promise to himself that he wouldn’t make a gamble ever again. After that day, Samson went on to get an economics degree and started a job at Fleck Inc. and decided to live a secluded life. He lived on his own until the age of 80, then he went to a retirement home where he died at the ripe age of 82.
